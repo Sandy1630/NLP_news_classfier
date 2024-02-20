@@ -11,5 +11,14 @@ import pickle
 
 with open("svm_model_news.pkl","rb") as file:
     model=pickle.load(file)
-with open("vectorizer_model.pkl","rb") as f:
-    tfid_vector=pickle.load(f)
+tfidf_vector=TfidfVectorizer()
+
+st.title("NEWS Classifier")
+
+text=st.text_input("enter your text")
+
+if text:
+    preprocessed_text=tfidf_vector.fit_transform(text)
+    prediction=model.predict(preprocessed_text)
+    print(prediction[0])
+
