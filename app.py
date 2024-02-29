@@ -72,7 +72,7 @@ if text:
     
     feature_names=tfidf.get_feature_names_out()
 
-    st.write(pd.DataFrame(text.toarray(),columns=feature_names).head())
+    with open()
 
     
     
