@@ -72,7 +72,12 @@ if text:
     
     feature_names=tfidf.get_feature_names_out()
 
-    with open()
+    with open("C:\\Users\\santh\\news_classifier\\NLP_news_classfier\\svm_model_news.pkl","rb") as f:
+        model=pickle.load(f)
+    
+    lables={0:"Politics/Entertainment/War",1:"Photography",2:"food"}
 
-    
-    
+    if st.button("predict"):
+        result=model.predict(text)
+        predict_lable=lables[result[0]]
+        st.write(predict_lable)
