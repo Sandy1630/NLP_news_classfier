@@ -80,4 +80,5 @@ if text:
     if st.button("predict"):
         result=model.predict(text)
         predict_lable=lables[result[0]]
-        st.write(predict_lable)
+        st.header(f":green[{predict_lable}]")
+        st.balloons()
