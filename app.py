@@ -18,7 +18,6 @@ st.title("NEWS Classifier")
 text=st.text_input("enter your text")
 
 if text:
-    preprocessed_text=tfidf_vector.fit_transform(text)
-    prediction=model.predict(preprocessed_text)
-    print(prediction[0])
+    text.str.replace("[^a-zA-Z0-9]"," ")
+    st.write(text)
 
