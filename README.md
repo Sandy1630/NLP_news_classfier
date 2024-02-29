@@ -26,7 +26,7 @@ The project involved:
 ## Technologies Used
 - Python
 - Scikit-learn
-- BeautifulSoup
+- Selenium
 - NLTK
 - Streamlit
 - Git
